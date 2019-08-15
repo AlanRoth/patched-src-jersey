@@ -258,7 +258,7 @@ public class ServerRuntime {
                     } else {
                         externalRequestScope.suspend(asyncResponderHolder.externalContext, injectionManager);
                     } 
-                } catch (final NotFoundException throwable) {
+                } catch (final Throwable throwable) {
                     responder.process(throwable);
                 } finally {
                     asyncResponderHolder.release();
